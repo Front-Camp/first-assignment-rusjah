@@ -5,8 +5,6 @@
  * const arr = [{flags: [1, 2, 3]}, {flags: [4, 5, 6]}];
  * getFlags(arr); // [1, 2, 3, 4, 5, 6]
  */
-const getFlags = arr => {
-  /* your logic here...*/
-};
+const getFlags = arr => [].concat(...arr.map(el => el.flags));
 
 export default getFlags;

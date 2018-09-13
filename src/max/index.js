@@ -6,8 +6,10 @@
 * max([1, 2, 4]); // 4
 * max([-1, 0]);   // 0
 */
-const max = arr => {
-  /* your logic here...*/
-};
+const max = arr => arr
+  .filter(el => !isNaN(el) && el !== Infinity && el !== -Infinity)
+  .reduce(
+    (acc, next) => acc < next ? next : acc
+  );
 
 export default max;

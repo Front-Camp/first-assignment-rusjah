@@ -10,8 +10,11 @@
  * sumElements(['1', 'hi', 3]);     // 4
  * sumElements([Infinity, NaN, 1]); // 1
  */
-const sumElements = arr => {
-  /* your logic here...*/
-};
+const sumElements = arr => arr
+  .map(el => Number(el))
+  .filter(el => !isNaN(el) && el !== Infinity && el !== -Infinity)
+  .reduce(
+    (acc, next) => acc + next
+  );
 
 export default sumElements;

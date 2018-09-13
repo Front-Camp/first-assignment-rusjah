@@ -10,7 +10,11 @@
 * sum(-1, 13); // 12
 */
 const sum = (a, b) => {
-  /* your logic here...*/
+  const data = [a, b].filter(el => !isNaN(el) && typeof el === 'number' && el !== Infinity && el !== -Infinity)
+  if(data.length === 2) {
+    return a + b;
+  }
+  throw new Error('Bad data!')
 };
 
 export default sum;
