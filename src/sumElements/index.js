@@ -11,7 +11,7 @@
  * sumElements([Infinity, NaN, 1]); // 1
  */
 const sumElements = arr => arr
-  .map(el => Number(el))
+  .map(el => Number(el) || parseInt(el))
   .filter(el => !isNaN(el) && el !== Infinity && el !== -Infinity)
   .reduce(
     (acc, next) => acc + next

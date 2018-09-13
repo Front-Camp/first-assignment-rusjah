@@ -7,11 +7,9 @@
  * turnMeBaby('hello');     // 'olleh'
  * turnMeBaby('Some text'); // 'txet emoS'
  */
-const turnMeBaby = str => {
-  if (typeof str === 'string') {
-    return str.split('').reverse().join('');
-  }
-  throw new Error('this is not a string')
-};
+const turnMeBaby = str =>
+  typeof str === 'string'
+    ? str.split('').reverse().join('')
+    : new Error('this is not a string');
 
 export default turnMeBaby;
